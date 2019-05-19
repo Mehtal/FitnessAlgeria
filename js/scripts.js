@@ -5,7 +5,7 @@ $(window).load(function () {
 
 $(document).ready(function () {
   $('#counter').countdown({
-    until: new Date(2019, 5 - 1, 20),
+    until: new Date(2019, 5 - 1, 24),
     format: 'dHMS'
   })
 
