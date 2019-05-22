@@ -1,0 +1,189 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  font-family: 'Amiri', serif;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #100e17;
+  color: #fff; }
+
+.navbar {
+  background: #212529; }
+
+.hero {
+  height: 100vh;
+  min-width: 100%;
+  font-family: 'Amiri', serif;
+  /*background-image:url('../img/bg.jpeg');
+  background-position: center;
+  background-size:cover;*/
+  display: grid;
+  grid-template-columns: 50px auto 50px;
+  grid-template-rows: 50px auto 50px;
+  z-index: 1; }
+  .hero:after {
+    background-image: radial-gradient(ellipse closest-side, rgba(15, 14, 22, 0.5), #100e17), url("../img/0.jpg");
+    background-position: center;
+    background-size: cover;
+    background-origin: no-repeat;
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: -1; }
+  .hero .hero-inside {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border: solid black 1px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-align: center; }
+  .hero .title {
+    justify-self: center;
+    align-self: center;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 50px; }
+  .hero .sub {
+    justify-self: center;
+    align-self: center;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 50px; }
+  .hero .header-bar {
+    background-color: #00d2d3;
+    padding: calc(200px + 1rem) 2rem 1rem 2rem;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    overflow: visible;
+    z-index: -2;
+    margin-top: -200px; }
+
+.article {
+  text-align: right;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  margin: 100px auto; }
+  .article:after {
+    content: '';
+    background-position: center;
+    background-size: cover;
+    background-origin: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; }
+  .article h1 {
+    font-size: 2rem;
+    margin-bottom: 0;
+    padding: 25px; }
+    .article h1 a {
+      color: #fff; }
+  .article p {
+    margin-bottom: 20px;
+    padding: 5px 25px; }
+
+/* ----------------------------------------------- */
+.blog-card {
+  display: block;
+  position: relative;
+  top: 7vw;
+  width: 400px;
+  height: 250px;
+  margin: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+  transition: all 450ms ease-out 0s;
+  overflow: hidden; }
+  .blog-card .blog-img {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    height: 100%;
+    top: -9999px;
+    left: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    margin: auto;
+    overflow: hidden; }
+  .blog-card:hover {
+    box-shadow: 0 2px 35px rgba(0, 0, 0, 0.85); }
+    .blog-card:hover .text-overlay {
+      background: rgba(255, 255, 255, 0.8);
+      height: 50%;
+      top: 50%;
+      transition: all 450ms ease-in-out 0s; }
+    .blog-card:hover p {
+      height: 60px;
+      transition: all 350ms ease-in-out 0s; }
+      .blog-card:hover p a {
+        visibility: visible; }
+
+.text-overlay {
+  position: relative;
+  background: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  height: 40%;
+  top: 60%;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.3);
+  padding: 10px 12px;
+  overflow: hidden;
+  transition: all 450ms ease-in-out 0s;
+  cursor: pointer; }
+  .text-overlay h2 {
+    color: rgba(0, 0, 0, 0.85);
+    letter-spacing: 0.0225em;
+    width: auto;
+    margin: 0; }
+  .text-overlay p {
+    color: #555;
+    width: 380px;
+    height: 38px;
+    margin: 8px 0;
+    line-height: 1.25;
+    text-overflow: ellipsis;
+    overflow: hidden; }
+  .text-overlay a {
+    color: #378AEE;
+    text-decoration: none;
+    transition: all 350ms linear;
+    visibility: hidden; }
+    .text-overlay a:hover {
+      color: #449CC5;
+      border-bottom: 1px dotted #47A8F2; }
+
+.credit {
+  position: relative;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Lato", 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  text-align: center;
+  bottom: -22vh; }
+  .credit .creator-link {
+    color: rgba(255, 255, 255, 0.95);
+    font-family: 'Kaushan Script', 'Lato','Helvetica Neue',sans-serif;
+    font-size: 1.05em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: all 350ms linear; }
+    .credit .creator-link:hover {
+      color: #44BCC5;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+      transition: all 350ms linear; }
+
+/*# sourceMappingURL=main.css.map */

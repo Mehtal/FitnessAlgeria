@@ -1,0 +1,59 @@
+{% load cms_tags staticfiles sekizai_tags menu_tags %}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Amiri&amp;subset=arabic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Changa&display=swap" rel="stylesheet">
+
+    <title>{% page_attribute "page_title" %} - Fitness Algeria</title>
+    
+    
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    {% render_block "meta" %}
+    <!-- Custom styles for this template -->
+   <!--  <link href="{% static 'css/album.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet"> -->
+     <link href="{% static 'css/main.css' %}" rel="stylesheet">
+         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+    {% render_block "css" %}
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
+  </head>
+  <body oncopy="return false" oncut="return false" onpaste="return false">
+    {% cms_toolbar %}
+    {% include 'nav.html' %}
+    
+    {% block hero %}
+      <div class="hero">
+        <div class="hero-inside">
+        
+            <h1 class="title"><span class="text-primary">فتنس</span> الجزائر          
+            </h1>
+            <p class="sub">أسرار و خفايا كمال الأجسام  ... برامج تدريبية و غذائية أحترافية ... مكملات غذائية</p>
+         
+        </div>
+     
+
+    </div>
+  
+    {% endblock hero %}
+      
+      
+
+   
+   <!--  <h1>block content start</h1> -->
+   {% block content %}
+    {% endblock %}
+   
+<script src="{% static 'js/jquery-3.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+
+
+{% render_block "js" %}
+</body></html>
